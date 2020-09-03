@@ -11,6 +11,9 @@ PotholeDetection::PotholeDetection(const string cfg, const string weight, const 
 	this->cfg_path = cfg;
 	this->weight_path = weight;
 	this->name_path = name;
+	PotholeDetection::initDnn();
+	PotholeDetection::setYOLONames();
+	PotholeDetection::setOutPutLayers();
 }
 
 void PotholeDetection::setCfgFile(const string cfg) {
