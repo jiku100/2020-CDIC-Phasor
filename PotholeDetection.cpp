@@ -19,7 +19,7 @@ PotholeDetection::PotholeDetection(const string cfg, const string weight, const 
 void PotholeDetection::setCfgFile(const string cfg) {
 	this->cfg_path = cfg;
 }
-void PotholeDetection::setWeightFile(const string weight) {s
+void PotholeDetection::setWeightFile(const string weight) {
 	this->weight_path = weight;
 }
 void PotholeDetection::setNameFile(const string name) {
