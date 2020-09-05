@@ -7,7 +7,9 @@ PotholeDetection::PotholeDetection() {
 }
 
 PotholeDetection::PotholeDetection(const string cfg, const string weight, const string name) {
-	this->PotholeDetection::PotholeDetection();
+	this->frame_size = Size(640, 480);
+	this->min_confidence = 0.5;
+	this->nms_confidence = 0.5;
 	this->cfg_path = cfg;
 	this->weight_path = weight;
 	this->name_path = name;
@@ -114,9 +116,6 @@ void PotholeDetection::predict(Mat& frame, bool isGray, bool isFlip) {
 	dnn::blobFromImage(frame, blob, 1 / 255.0, this->input_size, Scalar(), true, false);
 	net.setInput(blob);
 	net.forward(this->predictions, this->output_layers);
-	if (isGray) {
-		cvtColor(frame, frame, COLOR_GRAY2BGR);
-	}
 }
 
 void PotholeDetection::PostProcess(Mat& frame) {
