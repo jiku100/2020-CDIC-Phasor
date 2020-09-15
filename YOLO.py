@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-YOLO_CFG_PATH = "./yolov3.cfg"
-YOLO_WEIGHT_PATH = "./yolov3.weights"
+YOLO_CFG_PATH = "./face-yolov3-tiny.cfg"
+YOLO_WEIGHT_PATH = "./face-yolov3-tiny_41000.weights"
 YOLO_NAMES_PATH = "./classes1.names"
 net = cv2.dnn.readNetFromDarknet(YOLO_CFG_PATH, YOLO_WEIGHT_PATH)
 classes = []
