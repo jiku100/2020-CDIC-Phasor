@@ -35,7 +35,7 @@ private:
 	vector<string> output_layers;
 public:
 
-	vector<pair<string, Rect>> outs;
+	vector<Rect> outs;
 
 	// constructor
 	PotholeDetection();
